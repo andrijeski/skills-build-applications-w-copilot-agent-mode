@@ -1,6 +1,18 @@
-const apiBaseUrl = import.meta.env.VITE_CODESPACE_NAME
-  ? `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev`
-  : 'http://localhost:8000'
+function getApiBaseUrl() {
+  if (import.meta.env.VITE_CODESPACE_NAME) {
+    return `https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev`
+  }
+
+  const hostname = window.location.hostname
+
+  if (hostname.endsWith('-5173.app.github.dev')) {
+    return `https://${hostname.replace('-5173.app.github.dev', '-8000.app.github.dev')}`
+  }
+
+  return 'http://localhost:8000'
+}
+
+const apiBaseUrl = getApiBaseUrl()
 
 export function getApiUrl(resource) {
   if (resource.startsWith('/api/')) {

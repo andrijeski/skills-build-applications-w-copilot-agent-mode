@@ -17,3 +17,5 @@ https://${import.meta.env.VITE_CODESPACE_NAME}-8000.app.github.dev/api/[componen
 ```
 
 When `VITE_CODESPACE_NAME` is unset, the app falls back to `http://localhost:8000` to avoid `https://undefined-8000.app.github.dev` URLs.
+
+When the app is opened from a Codespaces forwarded Vite URL and `VITE_CODESPACE_NAME` is not set, it also infers the matching `-8000.app.github.dev` backend URL from the browser hostname.
