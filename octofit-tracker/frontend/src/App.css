@@ -1,0 +1,147 @@
+.app-shell {
+  min-height: 100vh;
+  padding: 28px;
+}
+
+.app-header {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.brand-block {
+  align-items: center;
+  display: flex;
+  gap: 16px;
+  text-align: left;
+}
+
+.brand-block img {
+  height: 72px;
+  width: 72px;
+}
+
+.brand-block h1,
+.resource-heading h1 {
+  margin: 0;
+}
+
+.eyebrow {
+  color: #667085;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin: 0 0 4px;
+  text-transform: uppercase;
+}
+
+.api-pill {
+  background: #102a43;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 0.82rem;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  padding: 10px 14px;
+}
+
+.app-nav {
+  background: #f2f4f7;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  gap: 8px;
+  margin-bottom: 24px;
+  padding: 8px;
+}
+
+.app-nav .nav-link {
+  color: #344054;
+  font-weight: 700;
+}
+
+.app-nav .nav-link.active {
+  background: #116149;
+  color: #fff;
+}
+
+.resource-panel {
+  background: #fff;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  padding: 24px;
+  text-align: left;
+}
+
+.resource-heading {
+  align-items: start;
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.resource-heading p:not(.eyebrow) {
+  color: #667085;
+  margin-top: 6px;
+}
+
+.resource-card {
+  background: #f8fafc;
+  border: 1px solid #eaecf0;
+  border-radius: 8px;
+  height: 100%;
+  padding: 18px;
+}
+
+.resource-card h2 {
+  font-size: 1.1rem;
+  margin: 0 0 14px;
+}
+
+.resource-card dl {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+}
+
+.resource-card dl > div {
+  border-top: 1px solid #eaecf0;
+  display: grid;
+  gap: 8px;
+  grid-template-columns: minmax(96px, 0.35fr) 1fr;
+  padding-top: 10px;
+}
+
+.resource-card dt {
+  color: #667085;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.resource-card dd {
+  color: #101828;
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    padding: 16px;
+  }
+
+  .app-header,
+  .resource-heading {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .brand-block {
+    align-items: flex-start;
+  }
+
+  .resource-card dl > div {
+    grid-template-columns: 1fr;
+  }
+}
