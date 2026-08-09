@@ -4,6 +4,7 @@ function Users() {
   return (
     <ResourceList
       endpoint="/api/users/"
+      codespacesEndpoint="-8000.app.github.dev/api/users"
       resource="users"
       title="Users"
       description="Member profiles and coaching roles in the OctoFit tracker."

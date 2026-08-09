@@ -4,6 +4,7 @@ function Activities() {
   return (
     <ResourceList
       endpoint="/api/activities/"
+      codespacesEndpoint="-8000.app.github.dev/api/activities"
       resource="activities"
       title="Activities"
       description="Recent fitness activity logged by OctoFit members."

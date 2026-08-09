@@ -4,6 +4,7 @@ function Leaderboard() {
   return (
     <ResourceList
       endpoint="/api/leaderboard/"
+      codespacesEndpoint="-8000.app.github.dev/api/leaderboard"
       resource="leaderboard"
       title="Leaderboard"
       description="Competitive standings ranked by total OctoFit points."
